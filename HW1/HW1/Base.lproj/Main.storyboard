@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HW1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="sIY-kK-kyD">
+                                <rect key="frame" x="155" y="59" width="222" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="222" id="2hj-M2-C4L"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="16"/>
+                                    <segment title="32"/>
+                                    <segment title="48"/>
+                                    <segment title="64"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" systemColor="systemTealColor"/>
+                                <connections>
+                                    <action selector="array_length:" destination="BYZ-38-t0r" eventType="valueChanged" id="xNw-hP-Y95"/>
+                                </connections>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="yvv-5W-gCA">
+                                <rect key="frame" x="19" y="134" width="355" height="32"/>
+                                <segments>
+                                    <segment title="Insertion"/>
+                                    <segment title="Selection"/>
+                                    <segment title="Quick Sort"/>
+                                    <segment title="Merge Sort"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" systemColor="systemTealColor"/>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="atS-py-uKs">
+                                <rect key="frame" x="19" y="497" width="355" height="32"/>
+                                <segments>
+                                    <segment title="Insertion"/>
+                                    <segment title="Selection"/>
+                                    <segment title="Quick Sort"/>
+                                    <segment title="Merge Sort"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" systemColor="systemTealColor"/>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GX2-sc-2ey">
+                                <rect key="frame" x="16" y="59" width="70" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="ECs-ad-8OA"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Sort">
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" systemColor="systemTealColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="Sort_btn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WSl-Wz-8wI"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="N =" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lPC-v2-gdg">
+                                <rect key="frame" x="120" y="65" width="27" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BRc-0u-rx6">
+                                <rect key="frame" x="16" y="203" width="361" height="249"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="249" id="Md3-kQ-wWj"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kX7-ud-DwD">
+                                <rect key="frame" x="16" y="568" width="361" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="SQc-TT-Z9y"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="GX2-sc-2ey" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="6fV-YF-qAe"/>
+                            <constraint firstItem="BRc-0u-rx6" firstAttribute="leading" secondItem="GX2-sc-2ey" secondAttribute="leading" id="6hJ-gJ-Weh"/>
+                            <constraint firstItem="atS-py-uKs" firstAttribute="top" secondItem="BRc-0u-rx6" secondAttribute="bottom" constant="45" id="9sy-Qa-Lsr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sIY-kK-kyD" secondAttribute="trailing" constant="16" id="AJm-dq-kZr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kX7-ud-DwD" secondAttribute="trailing" constant="16" id="Eul-s6-3Ck"/>
+                            <constraint firstItem="sIY-kK-kyD" firstAttribute="leading" secondItem="lPC-v2-gdg" secondAttribute="trailing" constant="8" id="HNV-Dy-e39"/>
+                            <constraint firstItem="BRc-0u-rx6" firstAttribute="trailing" secondItem="sIY-kK-kyD" secondAttribute="trailing" id="KRS-Wu-DpV"/>
+                            <constraint firstItem="sIY-kK-kyD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Qgu-oq-XAd"/>
+                            <constraint firstItem="atS-py-uKs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="T1t-be-28h"/>
+                            <constraint firstItem="yvv-5W-gCA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TFu-XY-uLc"/>
+                            <constraint firstItem="BRc-0u-rx6" firstAttribute="top" secondItem="yvv-5W-gCA" secondAttribute="bottom" constant="38" id="TJX-86-o7s"/>
+                            <constraint firstItem="kX7-ud-DwD" firstAttribute="top" secondItem="atS-py-uKs" secondAttribute="bottom" constant="40" id="Vvg-sG-AAR"/>
+                            <constraint firstItem="GX2-sc-2ey" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ffL-hg-uvF"/>
+                            <constraint firstItem="kX7-ud-DwD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ngD-2u-pyR"/>
+                            <constraint firstItem="yvv-5W-gCA" firstAttribute="top" secondItem="GX2-sc-2ey" secondAttribute="bottom" constant="40" id="wCI-QX-B5g"/>
+                            <constraint firstItem="lPC-v2-gdg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="6" id="z8z-yY-cCI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="View_a" destination="BRc-0u-rx6" id="yqd-dG-YeM"/>
+                        <outlet property="View_b" destination="kX7-ud-DwD" id="HV2-Zr-AIO"/>
+                        <outlet property="algo_a" destination="yvv-5W-gCA" id="ZR2-Im-W9d"/>
+                        <outlet property="algo_b" destination="atS-py-uKs" id="dj8-yL-cnc"/>
+                        <outlet property="array_length" destination="sIY-kK-kyD" id="ONC-Ju-9YA"/>
+                        <outlet property="label_n" destination="lPC-v2-gdg" id="gP9-tJ-x45"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="102" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
